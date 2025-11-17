@@ -19,7 +19,7 @@ public class UsuarioService {
     }
 
 
-    public Usuario buscarPorId(Long id) {
+    public Usuario buscarUsuarioPorId(Long id) {
         return usuarioRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Produto não encontrado"));
     }
