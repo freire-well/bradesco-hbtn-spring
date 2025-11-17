@@ -16,30 +16,31 @@ public class ProdutoController {
 
 
     public ProdutoController(ProdutoService produtoService) {
-        // implemente aqui
+        this.produtoService = produtoService;
     }
 
 
     @GetMapping
     public List<Produto> listarProdutos() {
-        // implemente aqui
+        return produtoService.listarProdutos();
     }
 
 
     @PostMapping
     public Produto adicionarProduto(@RequestBody Produto produto) {
-        // implemente aqui
+        return produtoService.adicionarProduto(produto);
     }
 
 
     @PutMapping("/{id}")
     public Produto atualizarProduto(@PathVariable Long id, @RequestBody Produto produto) {
-        // implemente aqui
+        return produtoService.atualizarProduto(id, produto);
     }
 
 
     @DeleteMapping("/{id}")
     public String deletarProduto(@PathVariable Long id) {
-        // implemente aqui
+         produtoService.deletarProduto(id);
+        return "deletado";
     }
 }
