@@ -31,12 +31,12 @@ class ProdutoServiceTest {
 
     @Test
     void deveRetornarProdutoQuandoIdExistir() {
-      // implemente
+      assertEquals(produtoService, produtoRepository);
     }
 
 
     @Test
     void deveLancarExcecaoQuandoProdutoNaoExistir() {
-      // implemente
+      assertThrows(null, null);
     }
 }
